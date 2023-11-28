@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://4518kdmqlpft"]
+
+[ext_resource type="Texture2D" uid="uid://dslbr1kykbdf4" path="res://textures/elbow_down_right.png" id="1_tlm7n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ejwfi"]
+size = Vector2(36, 36)
+
+[node name="ElbowDownRight" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(64, 64)
+texture = ExtResource("1_tlm7n")
+
+[node name="DownRight" type="CollisionShape2D" parent="."]
+position = Vector2(111, 111)
+shape = SubResource("RectangleShape2D_ejwfi")
+
+[node name="ElbowOutside" type="CollisionPolygon2D" parent="."]
+position = Vector2(35, 35)
+polygon = PackedVector2Array(93, 0, 93, -35, -35, -35, -35, 93, 0, 93, 0, 0)

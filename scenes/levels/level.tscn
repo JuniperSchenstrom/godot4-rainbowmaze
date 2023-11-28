@@ -1,0 +1,47 @@
+[gd_scene load_steps=18 format=3 uid="uid://hwiid5mdxt8g"]
+
+[ext_resource type="PackedScene" uid="uid://dcg17d21oym5w" path="res://player/player.tscn" id="1_vjfyh"]
+[ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_wlw02"]
+[ext_resource type="PackedScene" uid="uid://rqn6t1gxtb81" path="res://map_elements/tiles/tile_elbow_down_left.tscn" id="3_30oam"]
+[ext_resource type="PackedScene" uid="uid://bglcquqpx3cyq" path="res://map_elements/tiles/tile_three_way_down.tscn" id="4_xj1ju"]
+[ext_resource type="PackedScene" uid="uid://biq2vgem47gby" path="res://map_elements/tiles/tile_three_way_left.tscn" id="5_h21gt"]
+[ext_resource type="PackedScene" uid="uid://cs4r3hngrw1hl" path="res://map_elements/tiles/tile_three_way_right.tscn" id="6_e0evr"]
+[ext_resource type="PackedScene" uid="uid://ih78hnqln1q6" path="res://map_elements/tiles/tile_three_way_up.tscn" id="7_hdx11"]
+[ext_resource type="PackedScene" uid="uid://4518kdmqlpft" path="res://map_elements/tiles/tile_elbow_down_right.tscn" id="8_u3ryl"]
+[ext_resource type="PackedScene" uid="uid://8rita206oux7" path="res://map_elements/tiles/tile_elbow_up_left.tscn" id="9_bfnu7"]
+[ext_resource type="PackedScene" uid="uid://cynh6cp2ngmt" path="res://map_elements/tiles/tile_elbow_up_right.tscn" id="10_itski"]
+[ext_resource type="PackedScene" uid="uid://dj774qtrln48b" path="res://map_elements/tiles/tile_end_ up.tscn" id="11_7olo5"]
+[ext_resource type="PackedScene" uid="uid://cypol3hqvtvag" path="res://map_elements/tiles/tile_end_down.tscn" id="12_vcn3m"]
+[ext_resource type="PackedScene" uid="uid://w8g7666d4txf" path="res://map_elements/tiles/tile_end_left.tscn" id="13_4604b"]
+[ext_resource type="PackedScene" uid="uid://dxj5uoalyhkcd" path="res://map_elements/tiles/tile_end_right.tscn" id="14_gucp1"]
+[ext_resource type="PackedScene" uid="uid://ddr13gpdmkqbm" path="res://map_elements/tiles/tile_four_way.tscn" id="15_wu163"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_hgsit"]
+resource_name = "MazeTiles"
+scenes/1/scene = ExtResource("3_30oam")
+scenes/2/scene = ExtResource("8_u3ryl")
+scenes/3/scene = ExtResource("9_bfnu7")
+scenes/4/scene = ExtResource("10_itski")
+scenes/5/scene = ExtResource("11_7olo5")
+scenes/6/scene = ExtResource("12_vcn3m")
+scenes/7/scene = ExtResource("13_4604b")
+scenes/8/scene = ExtResource("14_gucp1")
+scenes/9/scene = ExtResource("15_wu163")
+scenes/10/scene = ExtResource("4_xj1ju")
+scenes/11/scene = ExtResource("5_h21gt")
+scenes/12/scene = ExtResource("6_e0evr")
+scenes/13/scene = ExtResource("7_hdx11")
+
+[sub_resource type="TileSet" id="TileSet_yuy5m"]
+sources/0 = SubResource("TileSetScenesCollectionSource_hgsit")
+
+[node name="Level" type="Node2D"]
+script = ExtResource("1_wlw02")
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource("TileSet_yuy5m")
+format = 2
+layer_0/tile_data = PackedInt32Array(720908, 0, 589824)
+
+[node name="Player" parent="." instance=ExtResource("1_vjfyh")]
+scale = Vector2(0.2, 0.2)

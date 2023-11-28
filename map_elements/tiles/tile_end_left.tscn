@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://w8g7666d4txf"]
+
+[ext_resource type="Texture2D" uid="uid://hesfpwealye4" path="res://textures/end_left.png" id="1_0h8rr"]
+
+[node name="EndLeft" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(64, 64)
+texture = ExtResource("1_0h8rr")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(93, 64)
+polygon = PackedVector2Array(0, 29, 0, -29, -93, -29, -93, -64, 35, -64, 34, 64, -93, 64, -93, 29)

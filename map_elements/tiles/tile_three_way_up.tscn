@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://ih78hnqln1q6"]
+
+[ext_resource type="Texture2D" uid="uid://dtxd0igsqyyt3" path="res://textures/three_way_up.png" id="1_mprb0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ade0"]
+size = Vector2(36, 36)
+
+[node name="ThreeWayUp" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(64, 64)
+texture = ExtResource("1_mprb0")
+
+[node name="UpLeft" type="CollisionShape2D" parent="."]
+position = Vector2(17, 17)
+shape = SubResource("RectangleShape2D_0ade0")
+
+[node name="UpRight" type="CollisionShape2D" parent="."]
+position = Vector2(111, 17)
+shape = SubResource("RectangleShape2D_0ade0")
+
+[node name="Down" type="CollisionShape2D" parent="."]
+position = Vector2(64, 111)
+scale = Vector2(3.6, 1)
+shape = SubResource("RectangleShape2D_0ade0")

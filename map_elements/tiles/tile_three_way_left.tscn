@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://biq2vgem47gby"]
+
+[ext_resource type="Texture2D" uid="uid://bv4nyqyf5wy56" path="res://textures/three_way_left.png" id="1_kl1hs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ade0"]
+size = Vector2(36, 36)
+
+[node name="ThreeWayLeft" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(64, 64)
+texture = ExtResource("1_kl1hs")
+
+[node name="UpLeft" type="CollisionShape2D" parent="."]
+position = Vector2(17, 17)
+shape = SubResource("RectangleShape2D_0ade0")
+
+[node name="Right" type="CollisionShape2D" parent="."]
+position = Vector2(111, 64)
+scale = Vector2(1, 3.6)
+shape = SubResource("RectangleShape2D_0ade0")
+
+[node name="DownLeft" type="CollisionShape2D" parent="."]
+position = Vector2(17, 111)
+shape = SubResource("RectangleShape2D_0ade0")

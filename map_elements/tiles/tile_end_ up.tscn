@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dj774qtrln48b"]
+
+[ext_resource type="Texture2D" uid="uid://clhb6u8oywdrp" path="res://textures/end_up.png" id="1_xdngf"]
+
+[node name="EndUp" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(64, 64)
+texture = ExtResource("1_xdngf")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(42, 88)
+polygon = PackedVector2Array(86, -88, 86, 40, -42, 40, -42, -88, -7, -88, -7, 5, 51, 5, 51, -88)

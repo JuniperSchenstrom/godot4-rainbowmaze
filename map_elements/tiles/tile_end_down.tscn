@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://cypol3hqvtvag"]
+
+[ext_resource type="Texture2D" uid="uid://chhmps67if8km" path="res://textures/end_down.png" id="1_jcoa8"]
+
+[node name="EndDown" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(64, 64)
+texture = ExtResource("1_jcoa8")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(64, 35)
+polygon = PackedVector2Array(-29, 0, -29, 93, -64, 93, -64, -35, 64, -35, 64, 93, 29, 93, 29, 0)
