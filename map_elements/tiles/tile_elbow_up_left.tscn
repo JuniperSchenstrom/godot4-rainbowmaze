@@ -8,13 +8,12 @@ size = Vector2(36, 36)
 [node name="ElbowUpLeft" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(64, 64)
 texture = ExtResource("1_q7y4b")
 
 [node name="UpLeft" type="CollisionShape2D" parent="."]
-position = Vector2(17, 17)
+position = Vector2(-46.6, -46.6)
 shape = SubResource("RectangleShape2D_13ite")
 
 [node name="ElbowOutside" type="CollisionPolygon2D" parent="."]
-position = Vector2(93, 35)
+position = Vector2(29.4, -28.6)
 polygon = PackedVector2Array(-93, 58, 0, 58, 0, -35, 35, -35, 35, 93, -93, 93)

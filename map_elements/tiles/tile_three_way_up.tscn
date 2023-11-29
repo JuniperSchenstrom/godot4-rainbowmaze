@@ -8,18 +8,17 @@ size = Vector2(36, 36)
 [node name="ThreeWayUp" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(64, 64)
 texture = ExtResource("1_mprb0")
 
 [node name="UpLeft" type="CollisionShape2D" parent="."]
-position = Vector2(17, 17)
+position = Vector2(-47, -47)
 shape = SubResource("RectangleShape2D_0ade0")
 
 [node name="UpRight" type="CollisionShape2D" parent="."]
-position = Vector2(111, 17)
+position = Vector2(47, -46)
 shape = SubResource("RectangleShape2D_0ade0")
 
 [node name="Down" type="CollisionShape2D" parent="."]
-position = Vector2(64, 111)
+position = Vector2(0, 47)
 scale = Vector2(3.6, 1)
 shape = SubResource("RectangleShape2D_0ade0")

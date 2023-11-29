@@ -6,15 +6,15 @@
 size = Vector2(36, 36)
 
 [node name="ElbowUpRight" type="StaticBody2D"]
+metadata/_edit_horizontal_guides_ = [17.0]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(64, 64)
 texture = ExtResource("1_xgknt")
 
 [node name="UpRight" type="CollisionShape2D" parent="."]
-position = Vector2(111, 17)
+position = Vector2(47.4, -46.6)
 shape = SubResource("RectangleShape2D_ejwfi")
 
 [node name="ElbowOutside" type="CollisionPolygon2D" parent="."]
-position = Vector2(35, 35)
+position = Vector2(-28.6, -28.6)
 polygon = PackedVector2Array(93, 58, 93, 93, -35, 93, -35, -35, 0, -35, 0, 58)

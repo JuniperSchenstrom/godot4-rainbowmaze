@@ -1,17 +1,55 @@
-[gd_scene load_steps=4 format=3 uid="uid://hwiid5mdxt8g"]
+[gd_scene load_steps=19 format=3 uid="uid://hwiid5mdxt8g"]
 
 [ext_resource type="PackedScene" uid="uid://dcg17d21oym5w" path="res://player/player.tscn" id="1_vjfyh"]
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_wlw02"]
 [ext_resource type="PackedScene" uid="uid://dk0a3rkam1yw7" path="res://enemies/enemy_basic.tscn" id="3_b8y1m"]
+[ext_resource type="PackedScene" uid="uid://rqn6t1gxtb81" path="res://map_elements/tiles/tile_elbow_down_left.tscn" id="4_3tb27"]
+[ext_resource type="PackedScene" uid="uid://bglcquqpx3cyq" path="res://map_elements/tiles/tile_three_way_down.tscn" id="5_27fw6"]
+[ext_resource type="PackedScene" uid="uid://biq2vgem47gby" path="res://map_elements/tiles/tile_three_way_left.tscn" id="6_bpwpe"]
+[ext_resource type="PackedScene" uid="uid://cs4r3hngrw1hl" path="res://map_elements/tiles/tile_three_way_right.tscn" id="7_dai3t"]
+[ext_resource type="PackedScene" uid="uid://ih78hnqln1q6" path="res://map_elements/tiles/tile_three_way_up.tscn" id="8_bqhg2"]
+[ext_resource type="PackedScene" uid="uid://4518kdmqlpft" path="res://map_elements/tiles/tile_elbow_down_right.tscn" id="9_kfn4u"]
+[ext_resource type="PackedScene" uid="uid://cynh6cp2ngmt" path="res://map_elements/tiles/tile_elbow_up_right.tscn" id="10_itski"]
+[ext_resource type="PackedScene" uid="uid://8rita206oux7" path="res://map_elements/tiles/tile_elbow_up_left.tscn" id="10_vygc2"]
+[ext_resource type="PackedScene" uid="uid://cypol3hqvtvag" path="res://map_elements/tiles/tile_end_down.tscn" id="12_adh2o"]
+[ext_resource type="PackedScene" uid="uid://w8g7666d4txf" path="res://map_elements/tiles/tile_end_left.tscn" id="13_dug3y"]
+[ext_resource type="PackedScene" uid="uid://dxj5uoalyhkcd" path="res://map_elements/tiles/tile_end_right.tscn" id="14_qolbj"]
+[ext_resource type="PackedScene" uid="uid://dj774qtrln48b" path="res://map_elements/tiles/tile_end_up.tscn" id="15_t837n"]
+[ext_resource type="PackedScene" uid="uid://ddr13gpdmkqbm" path="res://map_elements/tiles/tile_four_way.tscn" id="16_niy27"]
+
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_jonle"]
+scenes/1/scene = ExtResource("4_3tb27")
+scenes/2/scene = ExtResource("9_kfn4u")
+scenes/3/scene = ExtResource("10_vygc2")
+scenes/4/scene = ExtResource("10_itski")
+scenes/5/scene = ExtResource("12_adh2o")
+scenes/6/scene = ExtResource("13_dug3y")
+scenes/7/scene = ExtResource("14_qolbj")
+scenes/8/scene = ExtResource("15_t837n")
+scenes/9/scene = ExtResource("16_niy27")
+scenes/10/scene = ExtResource("5_27fw6")
+scenes/11/scene = ExtResource("6_bpwpe")
+scenes/12/scene = ExtResource("7_dai3t")
+scenes/13/scene = ExtResource("8_bqhg2")
+
+[sub_resource type="TileSet" id="TileSet_nv7pm"]
+tile_size = Vector2i(128, 128)
+sources/0 = SubResource("TileSetScenesCollectionSource_jonle")
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_wlw02")
 metadata/_edit_horizontal_guides_ = [111.0]
 
+[node name="MazeTiles" type="TileMap" parent="."]
+scale = Vector2(0.5, 0.5)
+tile_set = SubResource("TileSet_nv7pm")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 0, 458752, 17, 0, 65536, 589841, 0, 196608, 589824, 0, 262144, 1, 0, 655360, 2, 0, 655360, 3, 0, 655360, 4, 0, 655360, 5, 0, 655360, 6, 0, 655360, 7, 0, 655360, 8, 0, 655360, 9, 0, 655360, 10, 0, 655360, 11, 0, 655360, 12, 0, 655360, 13, 0, 655360, 14, 0, 655360, 15, 0, 655360, 16, 0, 655360, 65553, 0, 720896, 131089, 0, 720896, 196625, 0, 720896, 262161, 0, 720896, 327697, 0, 720896, 393233, 0, 720896, 458769, 0, 720896, 524305, 0, 720896, 65536, 0, 131072, 131072, 0, 786432, 196608, 0, 786432, 262144, 0, 786432, 327680, 0, 786432, 393216, 0, 786432, 458752, 0, 786432, 524288, 0, 786432, 589825, 0, 851968, 589826, 0, 851968, 589827, 0, 851968, 589828, 0, 851968, 589829, 0, 851968, 589830, 0, 851968, 589831, 0, 851968, 589832, 0, 851968, 589833, 0, 851968, 589834, 0, 851968, 589835, 0, 851968, 589836, 0, 851968, 589837, 0, 851968, 589838, 0, 851968, 589839, 0, 851968, 589840, 0, 851968, 655377, 0, 655360, 655376, 0, 655360, 655375, 0, 655360, 655374, 0, 655360, 655373, 0, 655360, 655372, 0, 655360, 655371, 0, 655360, 655370, 0, 655360, 655369, 0, 655360, 655368, 0, 655360, 655367, 0, 655360, 655366, 0, 655360, 655365, 0, 655360, 655364, 0, 655360, 655363, 0, 655360, 655362, 0, 655360, 655361, 0, 655360, 655360, 0, 655360, 393221, 0, 589824, 327685, 0, 589824, 262149, 0, 589824, 196613, 0, 589824, 131077, 0, 589824, 65541, 0, 589824, 65540, 0, 589824, 65539, 0, 589824, 65538, 0, 786432, 65537, 0, 196608, 131073, 0, 655360, 196609, 0, 589824, 262145, 0, 589824, 327681, 0, 589824, 393217, 0, 589824, 458753, 0, 589824, 524289, 0, 589824, 524290, 0, 589824, 458754, 0, 589824, 393218, 0, 589824, 327682, 0, 589824, 262146, 0, 589824, 196610, 0, 589824, 131074, 0, 589824, 131075, 0, 589824, 196611, 0, 589824, 262147, 0, 589824, 327683, 0, 589824, 393219, 0, 589824, 458755, 0, 589824, 524291, 0, 589824, 524292, 0, 589824, 458756, 0, 589824, 393220, 0, 589824, 327684, 0, 589824, 262148, 0, 589824, 196612, 0, 589824, 131076, 0, 589824, 458757, 0, 589824, 524293, 0, 589824, 524294, 0, 589824, 458758, 0, 589824, 393222, 0, 589824, 327686, 0, 589824, 262150, 0, 589824, 196614, 0, 589824, 131078, 0, 589824, 65542, 0, 589824, 65543, 0, 589824, 131079, 0, 589824, 196615, 0, 589824, 262151, 0, 589824, 327687, 0, 589824, 393223, 0, 589824, 458759, 0, 589824, 524295, 0, 589824, 524296, 0, 589824, 458760, 0, 589824, 393224, 0, 589824, 327688, 0, 589824, 262152, 0, 589824, 196616, 0, 589824, 131080, 0, 589824, 65544, 0, 589824, 65545, 0, 589824, 131081, 0, 589824, 196617, 0, 589824, 262153, 0, 589824, 327689, 0, 589824, 393225, 0, 589824, 458761, 0, 589824, 524297, 0, 589824, 524298, 0, 589824, 458762, 0, 589824, 393226, 0, 589824, 327690, 0, 589824, 262154, 0, 589824, 196618, 0, 589824, 131082, 0, 589824, 65546, 0, 589824, 65547, 0, 589824, 131083, 0, 589824, 196619, 0, 589824, 262155, 0, 589824, 327691, 0, 589824, 393227, 0, 589824, 458763, 0, 589824, 524299, 0, 589824, 524300, 0, 589824, 458764, 0, 589824, 393228, 0, 589824, 327692, 0, 589824, 262156, 0, 589824, 196620, 0, 589824, 131084, 0, 589824, 65548, 0, 589824, 65549, 0, 589824, 131085, 0, 589824, 196621, 0, 589824, 262157, 0, 589824, 327693, 0, 589824, 393229, 0, 589824, 458765, 0, 589824, 524301, 0, 589824, 524302, 0, 589824, 458766, 0, 589824, 393230, 0, 589824, 327694, 0, 589824, 262158, 0, 589824, 196622, 0, 589824, 131086, 0, 589824, 65550, 0, 589824, 65551, 0, 589824, 131087, 0, 589824, 196623, 0, 589824, 262159, 0, 589824, 327695, 0, 589824, 393231, 0, 589824, 458767, 0, 589824, 524303, 0, 589824, 524304, 0, 589824, 458768, 0, 589824, 393232, 0, 589824, 327696, 0, 589824, 262160, 0, 589824, 196624, 0, 589824, 131088, 0, 589824, 65552, 0, 589824)
+
 [node name="Player" parent="." instance=ExtResource("1_vjfyh")]
-position = Vector2(64, 64)
+position = Vector2(32, 32)
 scale = Vector2(0.2, 0.2)
 
 [node name="EnemyBasic" parent="." instance=ExtResource("3_b8y1m")]
-position = Vector2(192, 192)
+position = Vector2(160, 160)
 scale = Vector2(0.2, 0.2)

@@ -5,9 +5,8 @@
 [node name="EndRight" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(64, 64)
 texture = ExtResource("1_g3afi")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(22, 55)
+position = Vector2(-42, -9)
 polygon = PackedVector2Array(106, 38, 106, 73, -22, 73, -22, -55, 106, -55, 106, -20, 13, -20, 13, 38)
