@@ -1,11 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://biq2vgem47gby"]
+[gd_scene load_steps=5 format=3 uid="uid://biq2vgem47gby"]
 
+[ext_resource type="Script" path="res://map_elements/tile_scripts/tile_three_way_left.gd" id="1_51wa2"]
 [ext_resource type="Texture2D" uid="uid://bv4nyqyf5wy56" path="res://textures/three_way_left.png" id="1_kl1hs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ade0"]
 size = Vector2(36, 36)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qg5r0"]
+size = Vector2(56, 56)
+
 [node name="ThreeWayLeft" type="StaticBody2D"]
+script = ExtResource("1_51wa2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_kl1hs")
@@ -22,3 +27,10 @@ shape = SubResource("RectangleShape2D_0ade0")
 [node name="DownLeft" type="CollisionShape2D" parent="."]
 position = Vector2(-47, 47)
 shape = SubResource("RectangleShape2D_0ade0")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_qg5r0")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

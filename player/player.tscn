@@ -14,3 +14,15 @@ texture = ExtResource("1_8vo6n")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(6.4, 6.4)
 shape = SubResource("RectangleShape2D_nv4gv")
+
+[node name="RayCastDown" type="RayCast2D" parent="."]
+target_position = Vector2(0, 80)
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+target_position = Vector2(-80, 0)
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+target_position = Vector2(80, 0)
+
+[node name="RayCastUp" type="RayCast2D" parent="."]
+target_position = Vector2(0, -80)

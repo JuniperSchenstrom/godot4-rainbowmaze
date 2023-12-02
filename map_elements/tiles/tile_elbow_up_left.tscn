@@ -1,11 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://8rita206oux7"]
+[gd_scene load_steps=5 format=3 uid="uid://8rita206oux7"]
 
 [ext_resource type="Texture2D" uid="uid://csqogtke7bepa" path="res://textures/elbow_up_left.png" id="1_q7y4b"]
+[ext_resource type="Script" path="res://map_elements/tile_scripts/tile_elbow_up_left.gd" id="1_xuwo3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_13ite"]
 size = Vector2(36, 36)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t81ey"]
+size = Vector2(56, 56)
+
 [node name="ElbowUpLeft" type="StaticBody2D"]
+script = ExtResource("1_xuwo3")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_q7y4b")
@@ -17,3 +22,10 @@ shape = SubResource("RectangleShape2D_13ite")
 [node name="ElbowOutside" type="CollisionPolygon2D" parent="."]
 position = Vector2(29.4, -28.6)
 polygon = PackedVector2Array(-93, 58, 0, 58, 0, -35, 35, -35, 35, 93, -93, 93)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_t81ey")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

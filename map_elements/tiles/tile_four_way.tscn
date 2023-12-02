@@ -1,11 +1,16 @@
-[gd_scene load_steps=3 format=3 uid="uid://ddr13gpdmkqbm"]
+[gd_scene load_steps=5 format=3 uid="uid://ddr13gpdmkqbm"]
 
 [ext_resource type="Texture2D" uid="uid://cfk62pgkqv2tv" path="res://textures/four_way.png" id="1_87u4j"]
+[ext_resource type="Script" path="res://map_elements/tile_scripts/tile_four_way.gd" id="1_ssbu2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ade0"]
 size = Vector2(36, 36)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cfpjt"]
+size = Vector2(56, 56)
+
 [node name="FourWay" type="StaticBody2D"]
+script = ExtResource("1_ssbu2")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_87u4j")
@@ -25,3 +30,10 @@ shape = SubResource("RectangleShape2D_0ade0")
 [node name="DownRight" type="CollisionShape2D" parent="."]
 position = Vector2(47, 47)
 shape = SubResource("RectangleShape2D_0ade0")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_cfpjt")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

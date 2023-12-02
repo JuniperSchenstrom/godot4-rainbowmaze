@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://hwiid5mdxt8g"]
+[gd_scene load_steps=22 format=3 uid="uid://hwiid5mdxt8g"]
 
 [ext_resource type="PackedScene" uid="uid://dcg17d21oym5w" path="res://player/player.tscn" id="1_vjfyh"]
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_wlw02"]
@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://dxj5uoalyhkcd" path="res://map_elements/tiles/tile_end_right.tscn" id="14_qolbj"]
 [ext_resource type="PackedScene" uid="uid://dj774qtrln48b" path="res://map_elements/tiles/tile_end_up.tscn" id="15_t837n"]
 [ext_resource type="PackedScene" uid="uid://ddr13gpdmkqbm" path="res://map_elements/tiles/tile_four_way.tscn" id="16_niy27"]
+[ext_resource type="Script" path="res://enemies/enemy_basic.gd" id="19_ja5n5"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_jonle"]
 scenes/1/scene = ExtResource("4_3tb27")
@@ -55,5 +56,6 @@ position = Vector2(32, 32)
 scale = Vector2(0.1, 0.1)
 
 [node name="EnemyBasic" parent="." instance=ExtResource("3_b8y1m")]
-position = Vector2(160, 160)
+position = Vector2(96, 160)
 scale = Vector2(0.1, 0.1)
+script = ExtResource("19_ja5n5")

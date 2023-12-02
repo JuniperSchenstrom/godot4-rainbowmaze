@@ -12,6 +12,11 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
 	
+	# keyboard input for player movement
 	direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	velocity = direction * speed
 	move_and_slide()
+
+func player_tile_enter():
+	# used by tile to check if the body entering is the player
+	pass
