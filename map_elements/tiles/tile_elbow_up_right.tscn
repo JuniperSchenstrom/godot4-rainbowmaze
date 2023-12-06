@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cynh6cp2ngmt"]
+[gd_scene load_steps=6 format=3 uid="uid://cynh6cp2ngmt"]
 
 [ext_resource type="Script" path="res://map_elements/tile_scripts/tile_elbow_up_right.gd" id="1_vmgi8"]
 [ext_resource type="Texture2D" uid="uid://b1reuwofmxvar" path="res://textures/elbow_up_right.png" id="1_xgknt"]
+[ext_resource type="Texture2D" uid="uid://dcajnb7nu7txd" path="res://textures/elbow_up_right_color.png" id="3_talv4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ejwfi"]
 size = Vector2(36, 36)
@@ -15,6 +16,10 @@ metadata/_edit_horizontal_guides_ = [17.0]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_xgknt")
+
+[node name="Sprite2D_C" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_talv4")
 
 [node name="UpRight" type="CollisionShape2D" parent="."]
 position = Vector2(47.4, -46.6)

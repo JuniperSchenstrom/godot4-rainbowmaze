@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://648v5ly4hwbk"]
+[gd_scene load_steps=7 format=3 uid="uid://648v5ly4hwbk"]
 
 [ext_resource type="Script" path="res://map_elements/tile_scripts/tile_straight_vertical.gd" id="1_k0fp0"]
 [ext_resource type="Texture2D" uid="uid://v1ruois5fks1" path="res://textures/straight_vertical.png" id="1_pttxn"]
+[ext_resource type="Texture2D" uid="uid://c7bp0ham2wqfg" path="res://textures/straight_vertical_color.png" id="3_kj5ee"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ymq4"]
 size = Vector2(36, 36)
@@ -17,6 +18,10 @@ script = ExtResource("1_k0fp0")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_pttxn")
+
+[node name="Sprite2D_C" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_kj5ee")
 
 [node name="Right" type="CollisionShape2D" parent="."]
 position = Vector2(47, 0)

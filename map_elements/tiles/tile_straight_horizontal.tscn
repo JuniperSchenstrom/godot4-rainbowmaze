@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://wx4o1s01yait"]
+[gd_scene load_steps=7 format=3 uid="uid://wx4o1s01yait"]
 
 [ext_resource type="Script" path="res://map_elements/tile_scripts/tile_straight_horizontal.gd" id="1_bpwe8"]
 [ext_resource type="Texture2D" uid="uid://dypfi0ruww2xk" path="res://textures/straight_horizontal.png" id="1_di5af"]
+[ext_resource type="Texture2D" uid="uid://473xmnv6lbl8" path="res://textures/straight_horizontal_color.png" id="3_r2526"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fyksl"]
 size = Vector2(36, 36)
@@ -17,6 +18,10 @@ script = ExtResource("1_bpwe8")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_di5af")
+
+[node name="Sprite2D_C" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_r2526")
 
 [node name="Up" type="CollisionShape2D" parent="."]
 position = Vector2(0, -47)

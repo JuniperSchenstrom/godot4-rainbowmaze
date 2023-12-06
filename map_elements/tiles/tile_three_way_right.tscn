@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cs4r3hngrw1hl"]
+[gd_scene load_steps=6 format=3 uid="uid://cs4r3hngrw1hl"]
 
 [ext_resource type="Texture2D" uid="uid://b0qy6demor0xf" path="res://textures/three_way_right.png" id="1_8f6ub"]
 [ext_resource type="Script" path="res://map_elements/tile_scripts/tile_three_way_right.gd" id="1_151o7"]
+[ext_resource type="Texture2D" uid="uid://l1dyioxapyxo" path="res://textures/three_way_right_color.png" id="3_4wdhy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ade0"]
 size = Vector2(36, 36)
@@ -14,6 +15,10 @@ script = ExtResource("1_151o7")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_8f6ub")
+
+[node name="Sprite2D_C" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_4wdhy")
 
 [node name="Left" type="CollisionShape2D" parent="."]
 position = Vector2(-47, 0)

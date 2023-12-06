@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://dj774qtrln48b"]
+[gd_scene load_steps=5 format=3 uid="uid://dj774qtrln48b"]
 
 [ext_resource type="Script" path="res://map_elements/tile_scripts/tile_end_up.gd" id="1_08hu6"]
 [ext_resource type="Texture2D" uid="uid://clhb6u8oywdrp" path="res://textures/end_up.png" id="1_xdngf"]
+[ext_resource type="Texture2D" uid="uid://g8pksbg7p4ry" path="res://textures/end_up_color.png" id="3_3bj01"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ji21n"]
 size = Vector2(56, 56)
@@ -11,6 +12,10 @@ script = ExtResource("1_08hu6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_xdngf")
+
+[node name="Sprite2D_C" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_3bj01")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 position = Vector2(-22, 24)

@@ -6,4 +6,4 @@ func _on_area_2d_body_entered(body):
 		
 		# switch sprites when player enters
 		$Sprite2D.hide()
-		# add color sprite
+		$Sprite2D_C.show()

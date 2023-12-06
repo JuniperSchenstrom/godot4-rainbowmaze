@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://bglcquqpx3cyq"]
+[gd_scene load_steps=6 format=3 uid="uid://bglcquqpx3cyq"]
 
 [ext_resource type="Script" path="res://map_elements/tile_scripts/tile_three_way_down.gd" id="1_3bdv4"]
 [ext_resource type="Texture2D" uid="uid://ddmkabhgy06vu" path="res://textures/three_way_down.png" id="1_35lcx"]
+[ext_resource type="Texture2D" uid="uid://dgbf6ffx1xvvr" path="res://textures/three_way_down_color.png" id="3_hks2t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ade0"]
 size = Vector2(36, 36)
@@ -14,6 +15,10 @@ script = ExtResource("1_3bdv4")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_35lcx")
+
+[node name="Sprite2D_C" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("3_hks2t")
 
 [node name="Up" type="CollisionShape2D" parent="."]
 position = Vector2(0, -47)
