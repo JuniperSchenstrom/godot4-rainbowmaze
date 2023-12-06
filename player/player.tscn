@@ -1,19 +1,19 @@
 [gd_scene load_steps=4 format=3 uid="uid://dcg17d21oym5w"]
 
-[ext_resource type="Texture2D" uid="uid://bbhdcbpigutgx" path="res://textures/gay_cube.png" id="1_8vo6n"]
 [ext_resource type="Script" path="res://player/player.gd" id="1_fbead"]
+[ext_resource type="Texture2D" uid="uid://cjpsp25py4cvf" path="res://textures/gay_circle.png" id="2_miaje"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_nv4gv"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_7qgw4"]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_fbead")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_8vo6n")
+texture = ExtResource("2_miaje")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 scale = Vector2(6.4, 6.4)
-shape = SubResource("RectangleShape2D_nv4gv")
+shape = SubResource("CircleShape2D_7qgw4")
 
 [node name="RayCastDown" type="RayCast2D" parent="."]
 target_position = Vector2(0, 80)
