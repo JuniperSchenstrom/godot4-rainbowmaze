@@ -1,5 +1,5 @@
 # godot4-rainbowmaze
-A game about a rainbow square restoring color to a maze.
+A game about a rainbow circle restoring color to a maze.
 
 Developed using Godot Engine 4.1.3.
 
